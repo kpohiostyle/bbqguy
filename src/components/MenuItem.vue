@@ -11,12 +11,11 @@
         <img :src="keep.img" class="card-img">
         <div class="card-img-overlay d-flex align-items-end inline">
           <h5 class="card-title">
-            {{ item.name }}
+            {{ menuItems.name }}
           </h5>
         </div>
       </button>
     </div>
-    <KeepModal :item="item" />
   </div>
 </template>
 <script>
@@ -24,22 +23,22 @@ import { reactive, computed } from 'vue'
 import { AppState } from '../AppState'
 import { menusService } from '../services/MenusService'
 export default {
-  name: 'KeepComponent',
+  name: 'MenuItemComponent',
   props: {
-    keep: {
+    menuItem: {
       type: Object,
       required: true
     }
   },
   setup(props) {
     const state = reactive({
-      activeKeep: computed(() => AppState.activeKeep)
+      activeMenuItem: computed(() => AppState.activeMenuItem)
     })
     return {
       state,
       keepDetails() {
-        AppState.activeKeep = props.keep
-        menusService.getKeepById(AppState.activeKeep.id)
+        AppState.activeMenuItem = props.menuItem
+        menusService.getKeepById(AppState.activeMenuItem.id)
       }
     }
   },

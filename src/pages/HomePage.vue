@@ -22,7 +22,7 @@
             Serving our famous fries and fry sauce people come from all around to feast on our bbq.
           </p>
         </div>
-        <div class="col-md-6 p-5">
+        <div class="col-md-6  ml-2 p-5">
           <img class="img1 w-100" src="//placehold.it/200x200" alt="">
         </div>
       </div>

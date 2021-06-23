@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MenuItem />
   </div>
 </template>
 <script>

@@ -1,14 +1,14 @@
 <template>
   <div class="col-md-12">
     <div class="card shadow flex-grow-1 ">
-      <button title="Open Keep Details"
+      <button title="Open Menu Item Details"
               type="button"
               class=""
               data-toggle="modal"
-              data-target="#keepDetailsModal"
+              data-target="#menuItemModal"
               @click="menuItemDetails()"
       >
-        <img :src="keep.img" class="card-img">
+        <img :src="menuItems.img" class="card-img">
         <div class="card-img-overlay d-flex align-items-end inline">
           <h5 class="card-title">
             {{ menuItems.name }}

@@ -5,6 +5,7 @@ export const AppState = reactive({
   user: {},
   account: {},
   menuItems: [{
+    id: 0,
     name: 'Tri-Tip',
     price: 9.00,
     img: '//placehold.it/200x200'

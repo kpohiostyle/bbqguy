@@ -8,10 +8,10 @@
               data-target="#menuItemModal"
               @click="menuItemDetails()"
       >
-        <img :src="menuItems.img" class="card-img">
+        <img :src="menuItem.img" class="card-img">
         <div class="card-img-overlay d-flex align-items-end inline">
           <h5 class="card-title">
-            {{ menuItems.name }}
+            {{ menuItem.name }}
           </h5>
         </div>
       </button>
@@ -38,7 +38,7 @@ export default {
       state,
       keepDetails() {
         AppState.activeMenuItem = props.menuItem
-        menusService.getKeepById(AppState.activeMenuItem.id)
+        menusService.getItemById(AppState.activeMenuItem.id)
       }
     }
   },
